@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VortexNote.API", "VortexNote.API\VortexNote.API.csproj", "{2B98340B-0445-40D3-B85F-93B501CB1C95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VortextNote.Domain", "VortextNote.Domain\VortextNote.Domain.csproj", "{DB873372-BE20-48AA-AAE8-CCC8B7BFEE3F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B98340B-0445-40D3-B85F-93B501CB1C95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B98340B-0445-40D3-B85F-93B501CB1C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B98340B-0445-40D3-B85F-93B501CB1C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B98340B-0445-40D3-B85F-93B501CB1C95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB873372-BE20-48AA-AAE8-CCC8B7BFEE3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB873372-BE20-48AA-AAE8-CCC8B7BFEE3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB873372-BE20-48AA-AAE8-CCC8B7BFEE3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB873372-BE20-48AA-AAE8-CCC8B7BFEE3F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A28021B7-A76C-46B6-8130-DFCC3A26E36F}
+	EndGlobalSection
+EndGlobal
