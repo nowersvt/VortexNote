@@ -1,0 +1,7 @@
+﻿CREATE
+
+dotnet ef migrations add ... -o Migrations -s .\VortexNote.API\ -p .\VortexNote.Infrastructure\ 
+
+UPDATE
+
+dotnet ef database update  -s .\VortexNote.API\ -p .\VortexNote.Infrastructure\ 
