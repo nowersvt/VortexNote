@@ -5,15 +5,15 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VortexNote.API", "VortexNote.API\VortexNote.API.csproj", "{2B98340B-0445-40D3-B85F-93B501CB1C95}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VortextNote.Domain", "VortextNote.Domain\VortextNote.Domain.csproj", "{DB873372-BE20-48AA-AAE8-CCC8B7BFEE3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VortexNote.Domain", "VortexNote.Domain\VortexNote.Domain.csproj", "{DB873372-BE20-48AA-AAE8-CCC8B7BFEE3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VortexNote.Infrastructure", "VortexNote.Infrastructure\VortexNote.Infrastructure.csproj", "{66FD35C5-8876-47B8-82B8-33E0FF103387}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VortexNote.Infrastructure", "VortexNote.Infrastructure\VortexNote.Infrastructure.csproj", "{66FD35C5-8876-47B8-82B8-33E0FF103387}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VortexNote.Application", "VortexNote.Application\VortexNote.Application.csproj", "{294BB7F7-C865-4559-A7A7-AB230353FDE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VortexNote.Application", "VortexNote.Application\VortexNote.Application.csproj", "{294BB7F7-C865-4559-A7A7-AB230353FDE2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DI", "DI", "{B0B9B382-D675-49FE-A373-94CC712E399F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VortexNote.Infrastructure.DependencyInjection", "VortexNote.Infrastructure.DependencyInjection\VortexNote.Infrastructure.DependencyInjection.csproj", "{B486B6E3-3CD9-4145-984A-75A1EE3908A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VortexNote.Infrastructure.DependencyInjection", "VortexNote.Infrastructure.DependencyInjection\VortexNote.Infrastructure.DependencyInjection.csproj", "{B486B6E3-3CD9-4145-984A-75A1EE3908A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

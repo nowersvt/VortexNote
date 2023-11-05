@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VortextNote.Domain\VortextNote.Domain.csproj" />
+    <ProjectReference Include="..\VortextNote.Domain\VortexNote.Domain.csproj" />
   </ItemGroup>
 
 </Project>
