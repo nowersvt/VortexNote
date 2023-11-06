@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using VortexNote.Application.Common.Mappers;
 using VortexNote.Application.Common.Providers;
 using VortexNote.Application.Notes.Command;
+using static VortexNote.Application.Common.Providers.IIdentityProvider;
 
 namespace VortexNote.Application.DependencyInjection
 {

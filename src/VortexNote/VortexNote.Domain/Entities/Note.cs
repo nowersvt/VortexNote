@@ -17,9 +17,9 @@ namespace VortexNote.Domain.Entities
         public User User { get; set; }
         [ForeignKey(nameof(User))]
         public Guid UserId { get; set; }
-        public Chunk Chunk { get; set; }
+        public Chunk? Chunk { get; set; }
         [ForeignKey(nameof(Chunk))]
-        public Guid ChunkId { get; set; }
+        public Guid? ChunkId { get; set; }
         #endregion
         #region .ctor EF Core
         /// <summary>

@@ -17,7 +17,7 @@ namespace VortexNote.Infrastructure.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.24");
 
-            modelBuilder.Entity("VortextNote.Domain.Entities.Chunk", b =>
+            modelBuilder.Entity("VortexNote.Domain.Entities.Chunk", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -43,13 +43,13 @@ namespace VortexNote.Infrastructure.Migrations
                     b.ToTable("Chunks");
                 });
 
-            modelBuilder.Entity("VortextNote.Domain.Entities.Note", b =>
+            modelBuilder.Entity("VortexNote.Domain.Entities.Note", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid>("ChunkId")
+                    b.Property<Guid?>("ChunkId")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("CreatedAt")
@@ -78,7 +78,7 @@ namespace VortexNote.Infrastructure.Migrations
                     b.ToTable("Notes");
                 });
 
-            modelBuilder.Entity("VortextNote.Domain.Entities.User", b =>
+            modelBuilder.Entity("VortexNote.Domain.Entities.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -89,9 +89,9 @@ namespace VortexNote.Infrastructure.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("VortextNote.Domain.Entities.Chunk", b =>
+            modelBuilder.Entity("VortexNote.Domain.Entities.Chunk", b =>
                 {
-                    b.HasOne("VortextNote.Domain.Entities.User", "User")
+                    b.HasOne("VortexNote.Domain.Entities.User", "User")
                         .WithMany("Chunks")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -100,15 +100,13 @@ namespace VortexNote.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("VortextNote.Domain.Entities.Note", b =>
+            modelBuilder.Entity("VortexNote.Domain.Entities.Note", b =>
                 {
-                    b.HasOne("VortextNote.Domain.Entities.Chunk", "Chunk")
+                    b.HasOne("VortexNote.Domain.Entities.Chunk", "Chunk")
                         .WithMany("Notes")
-                        .HasForeignKey("ChunkId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ChunkId");
 
-                    b.HasOne("VortextNote.Domain.Entities.User", "User")
+                    b.HasOne("VortexNote.Domain.Entities.User", "User")
                         .WithMany("Notes")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -119,12 +117,12 @@ namespace VortexNote.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("VortextNote.Domain.Entities.Chunk", b =>
+            modelBuilder.Entity("VortexNote.Domain.Entities.Chunk", b =>
                 {
                     b.Navigation("Notes");
                 });
 
-            modelBuilder.Entity("VortextNote.Domain.Entities.User", b =>
+            modelBuilder.Entity("VortexNote.Domain.Entities.User", b =>
                 {
                     b.Navigation("Chunks");
 

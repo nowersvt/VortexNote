@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using FluentValidation;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using VortexNote.Application.Common.Handlers;
 using VortexNote.Application.Common.Providers;
 using VortexNote.Domain.Base.Exceptions;
@@ -29,8 +30,13 @@ namespace VortexNote.Application.Notes.Command
 
             var note = new Note(request.Title, request.Description);
 
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == _identityProvider.UserId.Value);
+            if (user is null)
+                throw new DomainException("User dont found in DB");
+
+            _context.Users.Attach(user);
             await _context.Notes.AddAsync(note, cancellationToken);
-            note.UserId = _identityProvider.UserId.Value;
+            note.User = user;
             await _context.SaveChangesAsync(cancellationToken);
 
             return _mapper.Map<NoteViewModel>(note);
