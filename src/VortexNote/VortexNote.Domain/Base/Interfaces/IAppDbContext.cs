@@ -1,13 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
-using VortextNote.Domain.Entities;
+using VortexNote.Domain.Entities;
 
-namespace VortextNote.Domain.Base.Interfaces
+namespace VortexNote.Domain.Base.Interfaces
 {
     public interface IAppDbContext
     {
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
-        
+
         public DbSet<Note> Notes { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Chunk> Chunks { get; set; }

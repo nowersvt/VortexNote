@@ -1,6 +1,6 @@
-﻿using VortextNote.Domain.Base.Interfaces;
+﻿using VortexNote.Domain.Base.Interfaces;
 
-namespace VortextNote.Domain.Base.Abstacts
+namespace VortexNote.Domain.Base.Abstacts
 {
     public class Identity : IHaveId
     {

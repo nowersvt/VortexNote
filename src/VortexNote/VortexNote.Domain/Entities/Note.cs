@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-using VortextNote.Domain.Base.Abstacts;
+using VortexNote.Domain.Base.Abstacts;
 
-namespace VortextNote.Domain.Entities
+namespace VortexNote.Domain.Entities
 {
     public class Note : Auditable
     {

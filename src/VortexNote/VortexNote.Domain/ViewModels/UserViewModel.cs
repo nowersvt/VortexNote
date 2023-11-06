@@ -1,4 +1,4 @@
-﻿namespace VortextNote.Domain.ViewModels
+﻿namespace VortexNote.Domain.ViewModels
 {
     public class UserViewModel
     {

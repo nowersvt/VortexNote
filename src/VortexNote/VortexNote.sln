@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DI", "DI", "{B0B9B382-D675-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VortexNote.Infrastructure.DependencyInjection", "VortexNote.Infrastructure.DependencyInjection\VortexNote.Infrastructure.DependencyInjection.csproj", "{B486B6E3-3CD9-4145-984A-75A1EE3908A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VortexNote.Application.DependencyInjection", "VortexNote.Application.DependencyInjection\VortexNote.Application.DependencyInjection.csproj", "{BBC8754C-8AAF-4D5C-ACBE-7715705E911B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,12 +43,17 @@ Global
 		{B486B6E3-3CD9-4145-984A-75A1EE3908A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B486B6E3-3CD9-4145-984A-75A1EE3908A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B486B6E3-3CD9-4145-984A-75A1EE3908A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBC8754C-8AAF-4D5C-ACBE-7715705E911B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBC8754C-8AAF-4D5C-ACBE-7715705E911B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBC8754C-8AAF-4D5C-ACBE-7715705E911B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC8754C-8AAF-4D5C-ACBE-7715705E911B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B486B6E3-3CD9-4145-984A-75A1EE3908A4} = {B0B9B382-D675-49FE-A373-94CC712E399F}
+		{BBC8754C-8AAF-4D5C-ACBE-7715705E911B} = {B0B9B382-D675-49FE-A373-94CC712E399F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A28021B7-A76C-46B6-8130-DFCC3A26E36F}

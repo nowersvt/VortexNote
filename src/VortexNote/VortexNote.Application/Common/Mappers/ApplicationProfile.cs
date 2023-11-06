@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using VortextNote.Domain.Entities;
-using VortextNote.Domain.ViewModels;
+using VortexNote.Domain.Entities;
+using VortexNote.Domain.ViewModels;
 
 namespace VortexNote.Application.Common.Mappers
 {

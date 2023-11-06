@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
-using VortextNote.Domain.Base.Abstacts;
-using VortextNote.Domain.Base.Interfaces;
-using VortextNote.Domain.Entities;
+using VortexNote.Domain.Base.Abstacts;
+using VortexNote.Domain.Base.Interfaces;
+using VortexNote.Domain.Entities;
 
 namespace VortexNote.Infrastructure.Persistence
 {

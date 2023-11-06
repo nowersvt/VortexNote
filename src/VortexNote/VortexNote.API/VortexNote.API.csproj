@@ -19,10 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\VortexNote.Application.DependencyInjection\VortexNote.Application.DependencyInjection.csproj" />
     <ProjectReference Include="..\VortexNote.Application\VortexNote.Application.csproj" />
     <ProjectReference Include="..\VortexNote.Infrastructure.DependencyInjection\VortexNote.Infrastructure.DependencyInjection.csproj" />
   </ItemGroup>

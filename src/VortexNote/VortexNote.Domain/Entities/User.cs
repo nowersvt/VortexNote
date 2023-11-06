@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-using VortextNote.Domain.Base.Interfaces;
+using VortexNote.Domain.Base.Interfaces;
 
-namespace VortextNote.Domain.Entities
+namespace VortexNote.Domain.Entities
 {
     public class User : IHaveId
     {

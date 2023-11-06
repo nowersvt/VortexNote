@@ -1,4 +1,4 @@
-﻿namespace VortextNote.Domain.Base.Interfaces
+﻿namespace VortexNote.Domain.Base.Interfaces
 {
     public interface IAuditable<TName>
     {
