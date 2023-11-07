@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using System.Threading;
 using VortexNote.Application.Common.Handlers;
+using VortexNote.Application.Common.Helpers;
 using VortexNote.Application.Common.Providers;
 using VortexNote.Domain.Base.Exceptions;
 using VortexNote.Domain.Base.Files;
@@ -43,7 +44,7 @@ namespace VortexNote.Application.Users.Command
 
                 if (File.Exists(filePath))
                 {
-                    var readingResult = await ReadFromFile(filePath, cancellationToken);
+                    var readingResult = await UserFileSaverHelper.ReadFromFile(filePath, cancellationToken);
                     if (readingResult.IsSuccess)
                     {
                         data = readingResult.Value;
@@ -53,7 +54,7 @@ namespace VortexNote.Application.Users.Command
                 {
                     var user = await CreateUser(cancellationToken);
                     data = _mapper.Map<SavedData>(user);
-                    if (SaveInFile(Path.Combine(path, ApplicationStatic.APP_FILE_DICTIONARY), filePath, data).IsFailed)
+                    if (UserFileSaverHelper.SaveInFile(Path.Combine(path, ApplicationStatic.APP_FILE_DICTIONARY), filePath, data).IsFailed)
                     {
                         throw new DomainException("Problem with saving app-data-text-file");
                     }
@@ -75,39 +76,7 @@ namespace VortexNote.Application.Users.Command
 
 
         /// TODO : Set in other class helper
-        private Result SaveInFile(string path, string filePath, SavedData data)
-        {
-            try
-            {
-                Directory.CreateDirectory(path);
-
-                File.WriteAllText(filePath, JsonConvert.SerializeObject(data));
-
-                return Result.Ok();
-            }
-            catch (Exception ex)
-            {
-                return Result.Fail(ex.Message);
-            }
-        }
-        private async Task<Result<SavedData>> ReadFromFile(string path, CancellationToken cancellationToken)
-        {
-            var jsonData = await File.ReadAllTextAsync(path, cancellationToken);
-            if (string.IsNullOrEmpty(jsonData))
-                return Result.Fail("No saved data");
-
-            try
-            {
-                var savedData = JsonConvert.DeserializeObject<SavedData>(jsonData);
-                if (savedData is null)
-                    return Result.Fail("Errored saving data");
-                return Result.Ok(savedData);
-            }
-            catch
-            {
-                return Result.Fail("Erroring saving data");
-            }
-        }
+        
         private async Task<User> CreateUser(CancellationToken cancellationToken = default)
         {
             var user = new User();

@@ -24,9 +24,9 @@ namespace VortexNote.Application.Notes.Command
 
         public override async Task<NoteViewModel> Handle(CreateNoteCommand request, CancellationToken cancellationToken)
         {
-            var res = await CheckAuthorizationUser(cancellationToken);
-            if (res.IsFailed)
-                throw new DomainException(string.Join(", ", res.Reasons.Select(x => x.Message)));
+            var checkResult = await CheckAuthorizationUser(cancellationToken);
+            if (checkResult.IsFailed)
+                throw new UnauthorizedAccessException(string.Join(", ", checkResult.Reasons.Select(x => x.Message)));
 
             var note = new Note(request.Title, request.Description);
 

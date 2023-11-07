@@ -24,10 +24,10 @@ namespace VortexNote.Application.Notes.Query
         }
         public override async Task<IEnumerable<NoteViewModel>> Handle(GetUserNotesQuery request, CancellationToken cancellationToken)
         {
-            var result = await CheckAuthorizationUser(cancellationToken);
-            if(result.IsFailed)
-                throw new DomainException(string.Join(", ", result.Reasons.Select(x => x.Message)));
-            
+            var checkResult = await CheckAuthorizationUser(cancellationToken);
+            if (checkResult.IsFailed)
+                throw new UnauthorizedAccessException(string.Join(", ", checkResult.Reasons.Select(x => x.Message)));
+
             var user = _identityProvider.UserId;
             var notes = _context.Notes.Where(x=>x.UserId== user.Value);
             notes.SortBy(request.SortType);

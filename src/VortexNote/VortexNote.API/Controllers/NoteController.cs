@@ -11,6 +11,7 @@ namespace VortexNote.API.Controllers
         public NoteController(IMediator mediator) : base(mediator)
         {
         }
+
         [HttpGet]
         public async Task<IActionResult> GetAll([FromQuery] GetUserNotesQuery query,
             CancellationToken cancellationToken)
@@ -27,6 +28,15 @@ namespace VortexNote.API.Controllers
         {
             var res = await _mediator.Send(command, cancellationToken);
             return Ok(res);
+        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update([FromRoute] Guid id,
+           [FromBody] UpdateNoteBodyData data,
+           CancellationToken cancellationToken)
+        {
+            var command = new UpdateNoteCommand(id, data.NewTitle, data.NewDescription);
+            await _mediator.Send(command, cancellationToken);
+            return Ok();
         }
     }
 }

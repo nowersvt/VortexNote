@@ -26,6 +26,10 @@ namespace VortexNote.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -53,6 +57,10 @@ namespace VortexNote.Infrastructure.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Description")

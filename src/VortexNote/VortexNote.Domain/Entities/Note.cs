@@ -37,5 +37,11 @@ namespace VortexNote.Domain.Entities
             ChunkId = chunkId;
         }
         #endregion
+
+        public void Update(string newTitle, string newDescription)
+        {
+            Title = newTitle;
+            Description = newDescription;
+        }
     }
 }

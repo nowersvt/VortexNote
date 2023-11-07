@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace VortexNote.Domain.Base.Abstacts
 {
     [ApiController]
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]s/[action]")]
     public class BaseApiController : ControllerBase
     {
         protected IMediator _mediator;
