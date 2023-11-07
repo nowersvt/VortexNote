@@ -11,6 +11,10 @@
 *.sln.docstates
 *.db
 
+src/VortexNote/VortexNote.Infrastructure/Migrations
+src/VortexNote/VortexNote.Infrastructure/Migrations/AppDbContextModelSnapshot.cs
+src/VortexNote/VortexNote.Infrastructure/Migrations/
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
@@ -362,3 +366,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/src/VortexNote/VortexNote.API/app-data/app_data.txt
+/src/VortexNote/VortexNote.Infrastructure/Migrations

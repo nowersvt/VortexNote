@@ -14,7 +14,7 @@ namespace VortexNote.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Create()
         {
-            var result = await _mediator.Send(new CreateUserCommand());
+            var result = await _mediator.Send(new CheckUserCommand());
             return Ok(result);
         }
     }

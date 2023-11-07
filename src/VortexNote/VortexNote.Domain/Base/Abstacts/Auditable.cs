@@ -5,6 +5,7 @@ namespace VortexNote.Domain.Base.Abstacts
     public class Auditable : Identity, IAuditable
     {
         public DateTime CreatedAt { get; set; }
+        public string CreatedBy { get; set; }
         /// <summary>
         /// In future is make if we have global server
         /// </summary>
